@@ -121,4 +121,4 @@ def homepage(request):
 
 
 def index(request):
-    return render_to_response('home/index.hmtl')
+    return render_to_response('home/index.html')
