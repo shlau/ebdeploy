@@ -27,6 +27,3 @@ except Exception:
         traceback.print_exc()
         os.kill(os.getpid(), signal.SIGINT)
         time.sleep(2.5)
-
-
-application = get_wsgi_application()
