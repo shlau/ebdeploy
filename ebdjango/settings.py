@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'django-env.krfntxvpmp.us-west-1.elasticbeanstalk.com',
+    '127.0.0.1',
 ]
 
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'verification',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
 ]
 
 ROOT_URLCONF = 'ebdjango.urls'
@@ -89,11 +92,11 @@ else:
     DATABASES = {
 	'default': {
 	    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-	    'NAME': 'test',
-	    'USER': 'test',
-	    'PASSWORD': 'test',
+	    'NAME': 'takemeproject',
+	    'USER': 'takemeuser',
+	    'PASSWORD': 'BasedHajel129',
 	    'HOST': 'localhost',
-	    'PORT': '',	
+	    'PORT': '',
 	}
     }
 
@@ -135,3 +138,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = '/loggedin'
+LOGIN_URL = '/login'

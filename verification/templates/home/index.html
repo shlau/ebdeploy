@@ -1,0 +1,52 @@
+
+{% extends "home/main.html" %} 
+{% load static %}
+
+<!-- this is the home page with the grids -->
+
+    {% block search_bar %}
+        <div class = "col-md-6 search-container">
+            <div id = "custom-search-input" >
+                <div class = "input-group col-md-12">
+                    <input class = "form-control input-lg" placeholder = "Search for locations, people, activities..." type = "text" />
+                    <span class = "input-group-btn"> 
+                        <button type = "button">
+                            <i class= "material-icons" style="font-size: 3vw" >search</i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}
+    {% block page_content %}
+            <div class = "row">
+                <div class = "col-6 col-md-4 grid">
+                    <img style="width:100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7TWbbBuuR7KmQd7dvfOJFn5FjAaIdCR4Xyt074b-MVZcC0F0j" />
+                </div>
+                <div class = "col-6 col-md-4 grid">
+                    <img style="width:100%; height:100%; object-fit: cover;" src="http://hmgcreative.com/wp-content/uploads/2014/11/RTY-Shoyu-Bowl_LARGE.jpg" />
+                </div> 
+            </div>
+            <div class = "row">
+                <div class = "col-6 col-md-4 grid">
+                    <img style="width:100%; height:100%;" src="http://images1.ocweekly.com/imager/u/745xauto/7429091/snowmonster.jpg" />
+                </div> 
+
+                <div class = "col-6 col-md-4 grid">
+                    <img style="width:100%; height:100%;" src="http://i59.photobucket.com/albums/g293/ekmurphy12/Disney%20December%202015/D484D664-82C8-43D8-B572-0A80B1E06669_zpsrgeguoca.jpg" />
+                </div> 
+            </div>
+            <div class = "row">
+                <div class = "col-6 col-md-4 grid">
+                    <img style="width:100%; height:100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqxg-wKwyjdwVvFgWVqMhU6JUvH-fmxXNqfvDNdzH7WXbe6bki" />
+                </div>
+                <div class = "col-6 col-md-4 grid">
+                    <img style="width:100%; height:100%;" src="http://hmgcreative.com/wp-content/uploads/2014/11/RTY-Shoyu-Bowl_LARGE.jpg" />
+                </div> 
+            </div>
+
+
+    {% endblock %}
+    
+</html>

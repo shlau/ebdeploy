@@ -1,0 +1,145 @@
+body {
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.header-title {
+    font-family: Signika;
+    font-style: bold; 
+}
+
+.round-search {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px #000;
+    padding: 5px 5px 5px 5px;
+    margin-left: 20px;
+}
+
+.grid-container {
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    width: 100%;
+}
+
+.grid {
+    padding: 0;
+    margin: 0;
+}
+
+div img .grid-image {
+    width: 100%;
+    height: 100%;    
+}
+
+h2 {
+    font-size: 70px;
+    font-family: Roboto;
+    vertical-align: center;
+}
+
+h1
+{
+	margin: -0.55rem -9999rem;
+  font-variant-ligatures: none;
+  font-stretch: ultra-expanded;
+  font-weight: bold;
+  color: #333333;
+  font-size: 80px;
+	border: 2px solid #333333;
+	text-align: center;
+	background-color: #ff4d4d;
+}
+
+
+.center-box {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -250px;
+}
+
+
+.login-button {
+    background: linear-gradient(45deg, rgba(252,139,125,0.65) 0%, rgba(255,122,153,0.65) 50%, rgba(108,0,153,0.65) 100%);
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px rgba(34,62,66,.25);
+    color: #fff;
+    font-size: 18px;
+    letter-spacing:1px;
+    padding: 16px 32px;
+    text-decoration: none;
+    -webkit-transition: box-shadow 1s ease;
+    transition: box-shadow 1s ease;
+}
+
+.login-button:hover {
+    box-shadow: 0px 4px 4px rgba(34,62,66,.5);
+}
+
+.mdl-layout__content {
+    padding: 24px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 40px;
+}
+
+.search-container {
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    z-index:200;
+}
+
+#custom-search-input{
+    padding: 3px;
+    border: solid 3px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 2px 8px 2px 11px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+.prof-pic {
+    border: solid 1px #ccc;
+    width: 250px;
+    height: 250px;
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+.register-card {
+    position: fixed;
+    text-align: center;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-deep_purple.min.css"/>
+        <script defer src = "https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    {% block more_css %}
+        <link rel="stylesheet" type="text/css" href="{%static 'home/style.css' %}" />
+    {% endblock %}
+
+
+    <title> {% block page_title %} TakeMe {% endblock %} </title>
+    </head>
+
+    <body>
+    <!-- overall structure of the pages -->
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class = "mdl-layout__header">
+        <div class = "mdl-layout__header-row">
+
+            <!-- later replaced by logo -->
+            <a class = "header-title" style="text-decoration: none; color: white;" href="/"> TakeMe</a>
+
+            {% if user.is_authenticated %}
+            <nav class = "mdl-navigation mdl-layout--large-screen-only" style="position: absolute; right: 20px; top: 0px;"> 
+                 <label class="mdl-button mdl-js-button mdl-button--icon" for="profile-link">
+                     <i class="material-icons">face</i>
+                 </label>
+                 <a class="mdl-navigation__link" style="padding-left: 0" href="/profile" id ="profile-link">Profile</a>
+
+                 <label class="mdl-button mdl-js-button mdl-button--icon" for="favorites">
+                     <i class="material-icons">favorite</i>
+                 </label>
+                 <a class="mdl-navigation__link" style="padding-left:0" href="" id ="favorites">Saved</a>
+                 <label class="mdl-button mdl-js-button mdl-button--icon" for="post-course">
+                     <i class="material-icons">add circle</i>
+                 </label>
+                 <a class="mdl-navigation__link" style="padding-left:0" href="" id ="post-course">Post</a>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style = "margin-right: 20px" onclick="window.location.href='/logout'"> Log Out</button>
+             </nav>
+
+            {% else %}
+             <nav class = "mdl-navigation mdl-layout--large-screen-only" style="position: absolute; top: 0px; right: 20px;"> 
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style = "margin-right: 20px" onclick="window.location.href='/login'"> Log In</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location.href='/register'"> Sign Up</button>
+            {% endif %}
+
+        </div>
+        </header>
+
+        {% block search_bar %} {% endblock%} 
+        <main class = "mdl-layout__content">
+            <div class = "page-content grid-container">
+                {% block page_content %}{% endblock %}
+            </div>
+        </main>
+    </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+    </body>
+
+    
+</html>

@@ -1,0 +1,33 @@
+
+{% extends "home/main.html" %} 
+{% load static %}
+
+<!-- this is the home page with the grids -->
+
+    {% block search_bar %}
+        <div class = "col-md-6 search-container">
+            <div id = "custom-search-input" >
+                <div class = "input-group col-md-12">
+                    <input class = "form-control input-lg" placeholder = "Search for locations, people, activities..." type = "text" />
+                    <span class = "input-group-btn"> 
+                        <button type = "button">
+                            <i class= "material-icons" style="font-size: 3vw" >search</i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}
+    {% block page_content %}
+    <div class="row">
+        <div class="col-md-4 prof-pic" id ="profilepic">
+            <p> profile pic </p>
+        </div>
+        <div class="col-md-6">
+            <h2> {{firstname}} {{lastname}}</h2>
+        </div>
+    </div>
+    {% endblock %}
+    
+</html>
