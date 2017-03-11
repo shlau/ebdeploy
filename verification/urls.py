@@ -1,9 +1,9 @@
 from django.conf.urls import url
 from . import views
-from rest_framework.routers import DefaultRouter
+# from rest_framework.routers import DefaultRouter
 
-router = DefaultRouter()
-router.register(r'users', views.UserViewSet)
+# router = DefaultRouter()
+# router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
         url(r'^$', views.index, name='index'),
