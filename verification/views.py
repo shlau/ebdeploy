@@ -9,30 +9,30 @@ from django.contrib.auth import logout as auth_logout
 from django.template.context_processors import csrf
 from .models import LoginForm, User
 
-from rest_framework import authentication, permissions, viewsets
-from .serializers import UserSerializer
+# from rest_framework import authentication, permissions, viewsets
+# from .serializers import UserSerializer
 
 
-class DefaultsMixin(object):
-    authentication_classes = (
-        authentication.BasicAuthentication,
-        authentication.TokenAuthentication,
-    )
+# class DefaultsMixin(object):
+#     authentication_classes = (
+#         authentication.BasicAuthentication,
+#         authentication.TokenAuthentication,
+#     )
 
-    permission_classes = (
-        permissions.IsAuthenticated,
-    )
-    paginate_by = 25
-    paginate_by_parm = 'page_size'
-    max_paginate_by = 100
+#     permission_classes = (
+#         permissions.IsAuthenticated,
+#     )
+#     paginate_by = 25
+#     paginate_by_parm = 'page_size'
+#     max_paginate_by = 100
 
 
-class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
-    # API for listing users
-    lookup_field = User.USERNAME_FIELD
-    lookup_url_kwarg = User.USERNAME_FIELD
-    queryset = User.objects.order_by(User.USERNAME_FIELD)
-    serializer_class = UserSerializer
+# class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
+#     # API for listing users
+#     lookup_field = User.USERNAME_FIELD
+#     lookup_url_kwarg = User.USERNAME_FIELD
+#     queryset = User.objects.order_by(User.USERNAME_FIELD)
+#     serializer_class = UserSerializer
 
 
 def register(request):
