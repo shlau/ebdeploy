@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'django-env.krfntxvpmp.us-west-1.elasticbeanstalk.com',
-    '127.0.0.1',
 ]
 
 
