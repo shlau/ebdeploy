@@ -37,3 +37,12 @@ class RegisterForm(forms.ModelForm):
     class Meta:
         model = User
         fields = '__all__'
+
+
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+
+
+class Meta(models.Model):
+    db_table = "Person"
