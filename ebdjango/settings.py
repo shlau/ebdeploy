@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'ebdjangoenv.us-west-1.elasticbeanstalk.com',
     '127.0.0.1',
+    '172.31.5.169',
 ]
 
 
